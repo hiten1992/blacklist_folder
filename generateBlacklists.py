@@ -16,7 +16,7 @@ import hashlib
 # This is the Path where the tar file will be extracted
 path  = '/tmp'
 
-dirName = path + '/blacklists/';
+dirName = path + '/blacklists/'
 
 # This is the new path where the domains.txt files will created under their subfolders
 newPath = '/var/unbound/blacklist/'
@@ -119,7 +119,7 @@ def create_blacklist_Conf():
                             if result == None:
                                 # ~ print(line)
                                 # ~ time.sleep(1)
-                                ModifiedData="local-zone:" + ' ' + line + ' ' + "always_nxdomain" + '\n'
+                                ModifiedData= line + '\n'
                                 blacklist_file.write(ModifiedData)
     blacklist_file.close()
     print("\nDone.\n")
